@@ -1,1 +1,65 @@
-hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Input star sign</title>
+    <h1>This is a heading</h1>
+    <h2>This is a heading</h2>
+    <script>
+      function validate(){
+        reg = /^[a-zA-Z]+$/
+        reg2 = /^[A-Z]+$/
+        vname = document.forms[0].usrname
+        if (vname.value==""){
+          document.forms[0].usrname.focus();
+          vname.value = prompt("You have to enter your name.","");
+          return false;
+        }
+        if (!reg.test(vname.value)){
+          alert("You have to enter alphabets.")
+          return false;
+        }
+        if (!reg2.test(vname.value.charAt(0))){
+          alert("The first letter has to be capital.")
+          return false;
+        }
+        if (document.forms[0].usrsex.value==""){
+          alert("You have to choose your sex.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <form method="get" action="http://localhost:9999/Lab3/Horoscope" onsubmit="return validate()">
+      Input your name:
+      <input type="text" name="usrname" value="">
+      <br>
+      <br>
+      Input your sex:
+      <input type="radio" name="usrsex" value="male"> Male
+      <input type="radio" name="usrsex" value="female"> Female
+      <br>
+      <br>
+      Select your Zodiac sign:
+      <select name="usrzodiac">
+        <option value="1">Aries</option>
+        <option value="2">Taurus</option>
+        <option value="3">Gemini</option>
+        <option value="4">Cancer</option>
+        <option value="5">Leo</option>
+        <option value="6">Virgo</option>
+        <option value="7">Libra</option>
+        <option value="8">Scorpio</option>
+        <option value="9">Sagittarius</option>
+        <option value="10">Capricorn</option>
+        <option value="11">Aquarius</option>
+        <option value="12">Pisces</option>
+      </select>
+      <br>
+      <input type="submit" value="Submit">
+      <input type="reset"  value="Reset">
+    </form>
+  </body>
+</html>
