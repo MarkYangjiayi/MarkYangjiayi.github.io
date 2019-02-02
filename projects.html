@@ -1,6 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -25,29 +22,45 @@
 <div class="menu-item"><a href="EMF.html">Electro-Magnetic Field</a></div>
 </td>
 <td id="layout-content">
+
+<div id="toptitle">
+<h1>Projects</h1>
+</div>
+
+<h2>Large Kernel Spatial Pyramid Pooling for Image Segmentation</h2>
+<p>Semantic Segmentation has been one of the core techniques of remote sensing image application. Through pixel-wise segmentation, we can have a whole idea of the objects contained in the remote sensing images, and provide foundation of further object detection, and high level segmentation extraction. Early semantic segmentations choose to use traditional machine learning algorithms, but with the development of neural networks and fully convoluted networks(FCN), using deep learning often have much better results than traditional methods.</p>
+<p>Compared with natural image processing, remote sensing image segmentation has the following problems:</p>
+<ul><li><p>Remote sensing Images often has large size with abundant information. This brings the problem of cropping and regeneration of images.</p></li></ul>
+<ul><li><p>Remote Sensing Images often has more channels compared to 3 channels in original images</p></li></ul>
+<ul><li><p>The complexity brought by the earth components, properties and distribution may result in different object with similar appearance and same object with different appearance</p></li></ul>
+<p>Based on these properties of remote sensing images, we designed a new network component based on google’s Atrous Spatial Pyramid Pooling, which we name it as Large Kernel Spatial Pyramid Pooling. The idea of this component is to use “Large Kernel” component to extract precise feature to avoid the grid effect brought by Atrous Convolution. At the same time, Spatial Pyramid Pooling can extract multi-scale features. </p>
+<br>
+<a href="large_kernel_spp.jpg">Project Poster</a>
+<br>
+<a href="https://www.bupt.edu.cn/content/content.php?p=81_15_5699">News Page</a>
+
+<h2>Quantization of Training and Inference for Fully Convoluted Network</h2>
+<p>Researches on neural networks with discrete parameters and deployment in embedded systems have been active and promising topics. The work by Shuang Wu et al. presented a way to discretize both training and inference of neural networks. However, this work is only limited to shallow convolutional neural network. </p>
+<p>To extend his work into fully convoluted network with more layers, I am currently working on discretizing the process of forward propagation and back propagation of batch normalization. </p>
+<a href="https://github.com/MarkYangjiayi/Semantic-Quantization">GitHub</a>
+
 <div id="toptitle">
 <h1>Research</h1>
 </div>
 
 <h2>Demonstration Platform of "Tianji" Chipset</h2>
-<p>Under Construction.</p>
+
+<p>This first tage of demonstration of Tianji chipset is designed to demonstrate it's ability to process large amount of data at the same time. To be specific, the Tianji Chipset can process a input of 36-channel camera and predict hand-written numbers on every single of them simutaniously.</p>
+<img src="tianji_1.jpeg" height="306" width="621">
+<p>After the 36-channel camera acquires the handwritten digital body and performs pre-processing through the “input and output board”, it is written into the “Tianji business board” by UDP protocol, and then sent to the “display platform” for display.</p>
 
 <h2>Large Scale Implementation of Spiking Neural Network</h2>
 <p>Under Construction.</p>
 
 <br>
-<div id="toptitle">
-<h1>Projects</h1>
-</div>
 
-<h2>Quantization of Training and Inference for Fully Convoluted Network</h2>
-<p>Under Construction.</p>
-
-<h2>Large Kernel Spatial Pyramid Pooling for Image Segmentation</h2>
-<p>Under Construction.</p>
 </td>
 </tr>
 </table>
 </body>
 </html>
-
